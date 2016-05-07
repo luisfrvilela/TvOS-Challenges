@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="DesafioCloudKit" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="9Cg-zY-VhH">
+                                <rect key="frame" x="100" y="170" width="1720" height="771"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="771" id="QOn-b6-xdc"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="60" minimumInteritemSpacing="60" id="Nv1-8H-UgJ">
+                                    <size key="itemSize" width="309" height="452"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="50" minY="50" maxX="50" maxY="50"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="DeveloperCell" id="HAo-gZ-jsK" customClass="CollectionItemCollectionViewCell" customModule="DesafioCloudKit" customModuleProvider="target">
+                                        <rect key="frame" x="50" y="50" width="309" height="452"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="309" height="452"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" adjustsImageWhenAncestorFocused="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Umz-sn-eph">
+                                                    <rect key="frame" x="5" y="8" width="300" height="300"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="300" id="FDH-iR-44E"/>
+                                                        <constraint firstAttribute="width" constant="300" id="Y2X-7t-NB9"/>
+                                                    </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="self.layer.maskToBounds" value="YES"/>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="self.layer.cornerRadius">
+                                                            <integer key="value" value="150"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="luisfrvilela@gmail.com" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bp0-8e-1nG">
+                                                    <rect key="frame" x="32" y="414" width="246" height="30"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Luis Resende" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ECn-Uf-RPG">
+                                                    <rect key="frame" x="67" y="358" width="177" height="36"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="Umz-sn-eph" firstAttribute="centerX" secondItem="HAo-gZ-jsK" secondAttribute="centerX" id="1sr-wT-x9h"/>
+                                            <constraint firstItem="Umz-sn-eph" firstAttribute="top" secondItem="HAo-gZ-jsK" secondAttribute="topMargin" id="3OD-hG-6Zb"/>
+                                            <constraint firstItem="ECn-Uf-RPG" firstAttribute="top" secondItem="Umz-sn-eph" secondAttribute="bottom" constant="50" id="Cdp-tn-2Wd"/>
+                                            <constraint firstItem="ECn-Uf-RPG" firstAttribute="centerX" secondItem="Umz-sn-eph" secondAttribute="centerX" id="LWa-BB-jvW"/>
+                                            <constraint firstItem="Bp0-8e-1nG" firstAttribute="centerX" secondItem="ECn-Uf-RPG" secondAttribute="centerX" id="QRK-GR-vkn"/>
+                                            <constraint firstItem="Bp0-8e-1nG" firstAttribute="top" secondItem="ECn-Uf-RPG" secondAttribute="bottom" constant="20" id="iFD-wO-Xzg"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="lblEmail" destination="Bp0-8e-1nG" id="VSc-Ds-2OX"/>
+                                            <outlet property="lblName" destination="ECn-Uf-RPG" id="o3q-6j-BEa"/>
+                                            <outlet property="photo" destination="Umz-sn-eph" id="kFa-My-BKo"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search BEPiD Developer By Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wWZ-mh-7wy">
+                                <rect key="frame" x="100" y="16" width="1720" height="46"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="9Cg-zY-VhH" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="80" id="6M7-OH-qds"/>
+                            <constraint firstItem="9Cg-zY-VhH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="VbI-ox-Hth"/>
+                            <constraint firstItem="9Cg-zY-VhH" firstAttribute="width" secondItem="wWZ-mh-7wy" secondAttribute="width" id="hs2-aF-PuJ"/>
+                            <constraint firstItem="9Cg-zY-VhH" firstAttribute="centerX" secondItem="wWZ-mh-7wy" secondAttribute="centerX" id="iv7-6f-EJA"/>
+                            <constraint firstItem="9Cg-zY-VhH" firstAttribute="top" secondItem="wWZ-mh-7wy" secondAttribute="bottom" constant="108" id="pNg-NX-7kx"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="9Cg-zY-VhH" secondAttribute="bottom" constant="139" id="yuS-Tg-Fvy"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="collectionView" destination="9Cg-zY-VhH" id="a7a-fA-n6X"/>
+                        <outlet property="textField" destination="wWZ-mh-7wy" id="i5O-z1-1tI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
