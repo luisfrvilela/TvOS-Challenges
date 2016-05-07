@@ -36,11 +36,23 @@ class DetailViewController: UIViewController {
         descriptionLabel.text = media.descriptionMedia
         dateRelease.text = "Data de lançamento: " + media.releaseDate
         name.text = media.name
+        
+        if Util.getFavourite(media) == true {
+            addFavourite.setTitle("Remover dos Favoritos", forState: UIControlState.Normal)
+            addFavourite.setTitle("Remover dos Favoritos", forState: UIControlState.Selected)
+        }else{
+            addFavourite.setTitle("Adicionar aos Favoritos", forState: UIControlState.Normal)
+            addFavourite.setTitle("Adicionar aos Favoritos", forState: UIControlState.Selected)
+        }
     }
     
     @IBAction func addFavourite(sender: AnyObject) {
-        
-        
+        if Util.getFavourite(media) == false {
+            Util.saveFavourite(media)
+        }else{
+            Util.removeFavourite(media.name)
+        }
+        self.updateUI(media)
     }
     
 }

@@ -168,14 +168,17 @@
                                     </collectionViewCell>
                                 </cells>
                                 <connections>
-                                    <outlet property="dataSource" destination="9pv-A4-QxB" id="6yo-if-3DJ"/>
-                                    <outlet property="delegate" destination="9pv-A4-QxB" id="cii-UR-88J"/>
+                                    <outlet property="dataSource" destination="8rJ-Kc-sve" id="BrQ-jg-IbE"/>
+                                    <outlet property="delegate" destination="8rJ-Kc-sve" id="5Am-Ja-3Iq"/>
                                 </connections>
                             </collectionView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" systemItem="favorites" id="cPa-gy-q4n"/>
+                    <connections>
+                        <outlet property="collectionView" destination="DmQ-rV-W35" id="xUL-rE-cb9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>

@@ -12,6 +12,7 @@ class SecondViewController: UIViewController {
 
     var allFavourite = Array<ModelMedia>()
     
+    @IBOutlet weak var collectionView: UICollectionView!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -21,6 +22,11 @@ class SecondViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        self.collectionView.reloadData()
+    }
 
 
 }
@@ -28,15 +34,15 @@ class SecondViewController: UIViewController {
 extension SecondViewController: UICollectionViewDataSource {
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        allFilms = Util.getAllFilms()
-        return allFilms.count
+        allFavourite = Util.getAllFavourites()
+        return allFavourite.count
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier(CollectionViewCell.identifier, forIndexPath: indexPath) as! CollectionViewCell
         
-        cell.movie = allFilms[indexPath.row]
+        cell.movie = allFavourite[indexPath.row]
         
         return cell
     }

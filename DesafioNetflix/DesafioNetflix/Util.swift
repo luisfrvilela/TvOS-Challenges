@@ -13,6 +13,8 @@ import UIKit
 class Util: NSObject {
     
     static let KEY_FAVOURITES = "favoritos"
+    static var favourites = Array<ModelMedia>()
+    
     
     static func getAllFilms () -> Array<ModelMedia>{
         
@@ -27,54 +29,30 @@ class Util: NSObject {
     }
     
     static func getAllFavourites () -> Array<ModelMedia>{
-        
-        var arrayFilms = Array<ModelMedia>()
-        
-        let userDefaults = NSUserDefaults.standardUserDefaults()
-        
-        if let dict = userDefaults.objectForKey(KEY_FAVOURITES) {
-            for dictMovie in dict as! NSMutableDictionary {
-                let movie = dictMovie as! NSMutableDictionary
-                
-                let media = ModelMedia(_name: movie.objectForKey("name") as! String, _descriptionMedia: movie.objectForKey("description") as! String, _releaseDate: movie.objectForKey("releaseDate") as! String, _nameImage: movie.objectForKey("nameImage") as! String)
-                arrayFilms.append(media)
+        return favourites;
+    }
+    
+    static func getFavourite(media:ModelMedia)->Bool{
+        for mediaFav in favourites {
+            if mediaFav.name == media.name {
+                return true
             }
         }
-        for dictMovie in Movies.movies {
-            if let _ = userDefaults.objectForKey(dictMovie.0) {
-                let media = ModelMedia(_name: dictMovie.0, _descriptionMedia: dictMovie.1, _releaseDate: dictMovie.2, _nameImage: dictMovie.3)
-                arrayFilms.append(media)
-
-            }
-        }
-        
-        return arrayFilms
+        return false
     }
     
     static func saveFavourite(media:ModelMedia){
-        let userDefaults = NSUserDefaults.standardUserDefaults()
-        let dictMedia = NSMutableDictionary()
-        dictMedia.setObject(media.name, forKey: "name")
-        dictMedia.setObject(media.descriptionMedia, forKey: "description")
-        dictMedia.setObject(media.nameImage, forKey: "nameImage")
-        dictMedia.setObject(media.releaseDate, forKey: "releaseDate")
-        
-        var dictFavourites = NSMutableDictionary()
-        
-        if let dict = userDefaults.objectForKey(KEY_FAVOURITES) {
-            dictFavourites = dict as! NSMutableDictionary
-        }
-        dictFavourites.setObject(dictMedia, forKey: media.name)
-        userDefaults.setObject(dictFavourites, forKey: KEY_FAVOURITES)
-        userDefaults.synchronize()
+        favourites.append(media)
+        print("salvei \(media.name)")
     }
     
     static func removeFavourite(mediaName:String){
-        let userDefaults = NSUserDefaults.standardUserDefaults()
-        let dictFavourites = userDefaults.objectForKey(KEY_FAVOURITES)
-        dictFavourites?.removeObjectForKey(mediaName)
-        userDefaults.setObject(dictFavourites, forKey: KEY_FAVOURITES)
-        userDefaults.synchronize()
+        for (index,media) in favourites.enumerate() {
+            if media.name == mediaName {
+                favourites.removeAtIndex(index)
+                return
+            }
+        }
     }
 
 }
