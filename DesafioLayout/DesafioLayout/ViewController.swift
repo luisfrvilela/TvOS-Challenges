@@ -45,9 +45,9 @@ extension ViewController: UICollectionViewDelegate {
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
-//        let controller = segue.destinationViewController as! DetailViewController
-//        let cell = sender as! CollectionViewCell
-//        controller.media = cell.movie
+        let controller = segue.destinationViewController as! DetailViewController
+        let cell = sender as! CollectionViewCell
+        controller.topic = cell.topic
     }
 }
 
