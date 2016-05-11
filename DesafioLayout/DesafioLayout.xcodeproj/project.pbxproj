@@ -16,6 +16,8 @@
 		60ABA68E1CE281F200B434B9 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60ABA68D1CE281F200B434B9 /* CollectionViewCell.swift */; };
 		60ABA6921CE34FAD00B434B9 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60ABA6911CE34FAD00B434B9 /* DetailViewController.swift */; };
 		60ABA6941CE3506B00B434B9 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60ABA6931CE3506B00B434B9 /* TableViewCell.swift */; };
+		60ABA6961CE3605800B434B9 /* DetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60ABA6951CE3605800B434B9 /* DetailTableViewCell.swift */; };
+		60ABA69A1CE3787100B434B9 /* CustomTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60ABA6991CE3787100B434B9 /* CustomTextView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		60ABA68D1CE281F200B434B9 /* CollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		60ABA6911CE34FAD00B434B9 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		60ABA6931CE3506B00B434B9 /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		60ABA6951CE3605800B434B9 /* DetailTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailTableViewCell.swift; sourceTree = "<group>"; };
+		60ABA6991CE3787100B434B9 /* CustomTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTextView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +76,8 @@
 				60ABA6891CE2695900B434B9 /* iOSRequest.swift */,
 				60ABA68D1CE281F200B434B9 /* CollectionViewCell.swift */,
 				60ABA6931CE3506B00B434B9 /* TableViewCell.swift */,
+				60ABA6951CE3605800B434B9 /* DetailTableViewCell.swift */,
+				60ABA6991CE3787100B434B9 /* CustomTextView.swift */,
 			);
 			path = DesafioLayout;
 			sourceTree = "<group>";
@@ -148,6 +154,8 @@
 			files = (
 				60ABA68E1CE281F200B434B9 /* CollectionViewCell.swift in Sources */,
 				60ABA68A1CE2695900B434B9 /* iOSRequest.swift in Sources */,
+				60ABA69A1CE3787100B434B9 /* CustomTextView.swift in Sources */,
+				60ABA6961CE3605800B434B9 /* DetailTableViewCell.swift in Sources */,
 				60ABA6681CE2142600B434B9 /* ViewController.swift in Sources */,
 				60ABA6921CE34FAD00B434B9 /* DetailViewController.swift in Sources */,
 				60ABA6821CE221A300B434B9 /* ModelTopic.swift in Sources */,

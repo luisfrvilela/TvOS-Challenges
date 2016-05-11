@@ -31,7 +31,6 @@ class iOSRequest: NSObject{
     static func getArrayDictionary()-> [ModelTopic]{
 
         let arrayAllTopics = getJSON(jsonURL)
-        print(arrayAllTopics)
         var arrayTopics = [ModelTopic]()
         
         

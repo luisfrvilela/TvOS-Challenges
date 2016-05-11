@@ -12,14 +12,25 @@ class DetailViewController: UIViewController {
     
     @IBOutlet weak var topicName: UILabel!
     @IBOutlet weak var topicDescription: UITextView!
+    @IBOutlet weak var subtopicDescription: UITextView!
+    @IBOutlet weak var tableViewTopic: UITableView!
+    @IBOutlet weak var tableViewSubTopic: UITableView!
     
     var topic:ModelTopic! = nil
+    var subTopic:ModelTopic! = nil
+    
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.updateUI()
         self.addDefaultTopic()
+        
+        self.subtopicDescription.selectable = true
+        self.subtopicDescription.userInteractionEnabled = true
+        self.subtopicDescription.scrollEnabled = true
+        self.subtopicDescription.showsVerticalScrollIndicator = true
+        self.subtopicDescription.panGestureRecognizer.allowedTouchTypes = [UITouchType.Indirect.rawValue]
         // Do any additional setup after loading the view.
     }
 
@@ -55,17 +66,57 @@ class DetailViewController: UIViewController {
 extension DetailViewController: UITableViewDataSource , UITableViewDelegate{
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return (topic.subtopics?.count)!
+        if tableView == tableViewTopic {
+            return (topic.subtopics?.count)!
+        }else{
+            if subTopic != nil {
+                return (subTopic.subtopics?.count)!
+            }else{
+                return 0
+            }
+            
+        }
+        
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier(TableViewCell.identifier, forIndexPath: indexPath) as! TableViewCell
-        cell.subTopic = topic.subtopics![indexPath.row] as! ModelTopic
-        return cell
+        if tableView == tableViewTopic {
+            let cell = tableView.dequeueReusableCellWithIdentifier(TableViewCell.identifier, forIndexPath: indexPath) as! TableViewCell
+            cell.subTopic = topic.subtopics![indexPath.row] as! ModelTopic
+            return cell
+        }else{
+            if subTopic != nil {
+                let cellSub = tableView.dequeueReusableCellWithIdentifier(DetailTableViewCell.identifier, forIndexPath: indexPath) as! DetailTableViewCell
+                cellSub.subSubTopic = subTopic.subtopics![indexPath.row] as! ModelTopic
+                return cellSub
+
+            }else{
+                return UITableViewCell()
+            }
+        }
+        
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        let cell = tableView.cellForRowAtIndexPath(indexPath) as! TableViewCell
-        topicDescription.text = cell.subTopic.descriptionTopic
+        if tableView == tableViewTopic {
+            let cell = tableView.cellForRowAtIndexPath(indexPath) as! TableViewCell
+            topicDescription.text = cell.subTopic.descriptionTopic
+            if cell.subTopic.subtopics?.count>0 {
+                topicDescription.hidden = true
+                subtopicDescription.hidden = false
+                tableViewSubTopic.hidden = false
+                subTopic = cell.subTopic
+                subtopicDescription.text = subTopic.descriptionTopic
+                tableViewSubTopic.reloadData()
+            }else{
+                topicDescription.hidden = false
+                subtopicDescription.hidden = true
+                tableViewSubTopic.hidden = true
+                subTopic = nil
+            }
+        }else{
+            let cell = tableView.cellForRowAtIndexPath(indexPath) as! DetailTableViewCell
+            subtopicDescription.text = cell.subSubTopic.descriptionTopic
+        }
     }
 }
