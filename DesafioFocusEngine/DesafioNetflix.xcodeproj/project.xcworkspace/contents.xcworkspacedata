@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:DesafioLayout.xcodeproj">
+      location = "self:DesafioNetflix.xcodeproj">
    </FileRef>
 </Workspace>
