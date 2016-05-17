@@ -20,6 +20,9 @@ class TableViewCell: UITableViewCell {
         }
     }
     
+    var canFocusCollection = true
+    
+    
     private func updateUI(){
         collectionView.reloadData()
     }
@@ -55,16 +58,12 @@ extension TableViewCell: UICollectionViewDataSource {
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier(CollectionViewCell.identifier, forIndexPath: indexPath) as! CollectionViewCell
-        
         cell.movie = arrayMedia[indexPath.row]
-        
+        cell.canFocus = canFocusCollection
         return cell
     }
 }
 
 extension TableViewCell: UICollectionViewDelegate {
-    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
-        
-    }
     
 }

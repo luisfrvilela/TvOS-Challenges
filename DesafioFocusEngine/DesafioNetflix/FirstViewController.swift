@@ -41,6 +41,9 @@ extension FirstViewController: UITableViewDataSource {
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier(TableViewCell.identifier, forIndexPath: indexPath) as! TableViewCell
         cell.arrayMedia = arrayMedias[indexPath.row]
+        if indexPath.row%2==1 {
+            cell.canFocusCollection = false
+        }
         return cell
     }
 }

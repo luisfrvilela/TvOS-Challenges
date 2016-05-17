@@ -20,6 +20,7 @@ class Util: NSObject {
         var arraysMedias = Array<Array<ModelMedia>>()
         let arrayFilms = getAllFilms()
         arraysMedias.append(arrayFilms)
+        arraysMedias.append(arrayFilms.reverse())
         return arraysMedias
     }
     

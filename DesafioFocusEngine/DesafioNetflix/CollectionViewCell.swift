@@ -21,13 +21,20 @@ class CollectionViewCell: UICollectionViewCell {
         }
     }
     
+    var canFocus:Bool!{
+        didSet{
+            self.canBecomeFocused()
+        }
+    }
+    
+    
     private func updateUI(){
         image.image = UIImage(named:movie.nameImage)
         name.text = movie.name
     }
     
     override func canBecomeFocused() -> Bool {
-        return true
+        return self.canFocus
     }
     
     override func didUpdateFocusInContext(context: UIFocusUpdateContext, withAnimationCoordinator coordinator: UIFocusAnimationCoordinator) {
