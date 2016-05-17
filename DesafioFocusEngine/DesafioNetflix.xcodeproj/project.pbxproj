@@ -26,7 +26,7 @@
 		600F56151CD13B1C00C993F6 /* ModelMedia.swift in Sources */ = {isa = PBXBuildFile; fileRef = 600F56141CD13B1C00C993F6 /* ModelMedia.swift */; };
 		600F56171CD13ED800C993F6 /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 600F56161CD13ED800C993F6 /* Util.swift */; };
 		600F56191CD14DCE00C993F6 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 600F56181CD14DCE00C993F6 /* DetailViewController.swift */; };
-		6057779A1CEB4E1B00C1BA70 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 605777991CEB4E1B00C1BA70 /* TableViewCell.swift */; };
+		6057779C1CEB5DC200C1BA70 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6057779B1CEB5DC200C1BA70 /* TableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,7 +51,7 @@
 		600F56141CD13B1C00C993F6 /* ModelMedia.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelMedia.swift; sourceTree = "<group>"; };
 		600F56161CD13ED800C993F6 /* Util.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
 		600F56181CD14DCE00C993F6 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
-		605777991CEB4E1B00C1BA70 /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TableViewCell.swift; path = ../../../../MeusProjetos/MindBlow/MindBlow/MindBlow/TableViewCell.swift; sourceTree = "<group>"; };
+		6057779B1CEB5DC200C1BA70 /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,7 +92,7 @@
 				600F55F11CD1354E00C993F6 /* Info.plist */,
 				600F55FF1CD13A0E00C993F6 /* Movies.swift */,
 				600F55FB1CD1394000C993F6 /* CollectionViewCell.swift */,
-				605777991CEB4E1B00C1BA70 /* TableViewCell.swift */,
+				6057779B1CEB5DC200C1BA70 /* TableViewCell.swift */,
 				600F56131CD13A3600C993F6 /* Resources */,
 				600F56141CD13B1C00C993F6 /* ModelMedia.swift */,
 				600F56161CD13ED800C993F6 /* Util.swift */,
@@ -199,7 +199,7 @@
 				600F56001CD13A0E00C993F6 /* Movies.swift in Sources */,
 				600F55EB1CD1354E00C993F6 /* SecondViewController.swift in Sources */,
 				600F55E71CD1354E00C993F6 /* AppDelegate.swift in Sources */,
-				6057779A1CEB4E1B00C1BA70 /* TableViewCell.swift in Sources */,
+				6057779C1CEB5DC200C1BA70 /* TableViewCell.swift in Sources */,
 				600F55FD1CD1394000C993F6 /* CollectionViewCell.swift in Sources */,
 				600F56171CD13ED800C993F6 /* Util.swift in Sources */,
 				600F56151CD13B1C00C993F6 /* ModelMedia.swift in Sources */,
