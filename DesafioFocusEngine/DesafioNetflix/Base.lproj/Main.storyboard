@@ -113,7 +113,7 @@
                                                             <connections>
                                                                 <outlet property="image" destination="wsS-HR-DGE" id="9tg-Tk-5iG"/>
                                                                 <outlet property="name" destination="APV-6R-qcU" id="jrJ-vX-BHU"/>
-                                                                <segue destination="75o-ay-GRm" kind="show" id="9Qu-fU-Oki"/>
+                                                                <segue destination="75o-ay-GRm" kind="show" id="6t8-P0-TDQ"/>
                                                             </connections>
                                                         </collectionViewCell>
                                                     </cells>
@@ -226,6 +226,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="9Qu-fU-Oki"/>
+        <segue reference="6t8-P0-TDQ"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -21,6 +21,13 @@ class FirstViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        let controller = segue.destinationViewController as! DetailViewController
+        let cell = sender as! CollectionViewCell
+        controller.media = cell.movie
+    }
 
 
 }
